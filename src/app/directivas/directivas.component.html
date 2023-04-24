@@ -1,0 +1,24 @@
+<h1>Componente 6: Directivas</h1>
+
+<h3>Directiva ngIf: </h3>
+
+<!--Si mostrarMensaje==true se muestra el mensaje, si el false vacío-->
+<div *ngIf="mostrarMensaje">
+  <p>Este es un mensaje que se muestra si la variable mostrarMensaje es verdadera</p>
+</div>
+
+<h3>Directiva ngFor: </h3>
+
+<ul>
+  <li *ngFor="let dia of dias">{{dia}}</li>
+</ul>
+
+<h3>Directiva ngSwitch: </h3>
+<p>En el ts del componente escoge una de las opciones disponibles para ver el funcionamiento de ngFor:</p>
+
+<div [ngSwitch]="opcionSeleccionada">
+  <div *ngSwitchCase="'opcion1'">Has seleccionado la opción 1</div>
+  <div *ngSwitchCase="'opcion2'">Has seleccionado la opción 2</div>
+  <div *ngSwitchCase="'opcion3'">Has seleccionado la opción 3</div>
+  <div *ngSwitchDefault>Selecciona una opción</div>
+</div>

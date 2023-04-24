@@ -1,0 +1,5 @@
+<label for="nombre">Nombre: </label> <input type="text" [(ngModel)]="nombre"><br><br>
+<label for="id">Id: </label> <input type="number" [(ngModel)]="id"> <br><br>
+
+
+<input type="button" value="Redireccionar" (click)="redireccionParametros()" [routerLink]="['componenteDestinoParametros']" [queryParams]="{mandarId:'id',mandarNombre:'nombre'}">
